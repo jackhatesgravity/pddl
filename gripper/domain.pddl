@@ -13,7 +13,23 @@
        :effect (and  (at-robby ?to)
 		     (not (at-robby ?from))))
 
-
+    (:action swap
+        :parameters (?ball-one ?ball-two ?gripper-one ?gripper-two ?room)
+        :precondition (and
+            (at-robby ?room)
+            (carry ?ball-one ?gripper-one)
+            (free ?gripper-two)
+            (at ?ball-two ?room)
+         )
+        :effect (and
+            (carry ?ball-two ?gripper-two)
+            (at ?ball-one ?room)
+            (free ?gripper-one)
+            (not (carry ?ball-one ?gripper-one))
+            (not (free ?gripper-two))
+            (not (at ?ball-two ?room))
+         )
+    )
 
    (:action pick
        :parameters (?obj ?room ?gripper)
