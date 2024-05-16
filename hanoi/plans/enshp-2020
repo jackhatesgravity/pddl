@@ -1,0 +1,41 @@
+Planning service: https://solver.planning.domains:5001/package/enhsp-2020/solve
+Domain: hanoi, Problem: hanoi
+
+Plan found:
+0.00000:  (move d1 d2 peg3)
+1.00000:  (move d2 d3 peg2)
+2.00000:  (move d1 peg3 d2)
+3.00000:  (move d3 d4 peg3)
+4.00000:  (move d1 d2 d4)
+5.00000:  (move d2 peg2 d3)
+6.00000:  (move d1 d4 d2)
+7.00000:  (move d4 d5 peg2)
+8.00000:  (move d1 d2 d4)
+9.00000:  (move d2 d3 d5)
+10.00000: (move d1 d4 d2)
+11.00000: (move d3 peg3 d4)
+12.00000: (move d1 d2 d3)
+13.00000: (move d2 d5 peg3)
+14.00000: (move d1 d3 d5)
+15.00000: (move d2 peg3 d3)
+16.00000: (move d1 d5 d2)
+17.00000: (move d5 peg1 peg3)
+18.00000: (move d1 d2 peg1)
+19.00000: (move d2 d3 d5)
+20.00000: (move d1 peg1 d2)
+21.00000: (move d3 d4 peg1)
+22.00000: (move d1 d2 d4)
+23.00000: (move d2 d5 d3)
+24.00000: (move d1 d4 d2)
+25.00000: (move d4 peg2 d5)
+26.00000: (move d1 d2 d4)
+27.00000: (move d2 d3 peg2)
+28.00000: (move d1 d4 d2)
+29.00000: (move d3 peg1 d4)
+30.00000: (move d1 d2 peg1)
+31.00000: (move d2 peg2 d3)
+32.00000: (move d1 peg1 d2)
+Metric: 32
+Makespan: 32
+States evaluated: undefined
+Planner found 1 plan(s) in 2.806secs.

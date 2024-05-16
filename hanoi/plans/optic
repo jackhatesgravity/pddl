@@ -1,0 +1,39 @@
+Planning service: https://solver.planning.domains:5001/package/optic/solve
+Domain: hanoi, Problem: hanoi
+
+Plan found:
+0.00000: (move d1 d2 peg3) [0.00100]
+0.00100: (move d2 d3 peg2) [0.00100]
+0.00200: (move d1 peg3 d2) [0.00100]
+0.00300: (move d3 d4 peg3) [0.00100]
+0.00400: (move d1 d2 d4) [0.00100]
+0.00500: (move d2 peg2 d3) [0.00100]
+0.00600: (move d1 d4 d2) [0.00100]
+0.00700: (move d4 d5 peg2) [0.00100]
+0.00800: (move d1 d2 d4) [0.00100]
+0.00900: (move d2 d3 d5) [0.00100]
+0.01000: (move d1 d4 d2) [0.00100]
+0.01100: (move d3 peg3 d4) [0.00100]
+0.01200: (move d1 d2 peg3) [0.00100]
+0.01300: (move d2 d5 d3) [0.00100]
+0.01400: (move d1 peg3 d2) [0.00100]
+0.01500: (move d5 peg1 peg3) [0.00100]
+0.01600: (move d1 d2 peg1) [0.00100]
+0.01700: (move d2 d3 d5) [0.00100]
+0.01800: (move d1 peg1 d2) [0.00100]
+0.01900: (move d3 d4 peg1) [0.00100]
+0.02000: (move d1 d2 d4) [0.00100]
+0.02100: (move d2 d5 d3) [0.00100]
+0.02200: (move d1 d4 d2) [0.00100]
+0.02300: (move d4 peg2 d5) [0.00100]
+0.02400: (move d1 d2 d4) [0.00100]
+0.02500: (move d2 d3 peg2) [0.00100]
+0.02600: (move d1 d4 d2) [0.00100]
+0.02700: (move d3 peg1 d4) [0.00100]
+0.02800: (move d1 d2 peg1) [0.00100]
+0.02900: (move d2 peg2 d3) [0.00100]
+0.03000: (move d1 peg1 d2) [0.00100]
+Metric: 0.03
+Makespan: 0.031
+States evaluated: 320
+Planner found 1 plan(s) in 32.061secs.

@@ -1,0 +1,332 @@
+Planning service: https://solver.planning.domains:5001/package/delfi/solve
+Domain: hanoi, Problem: hanoi
+Parsing pddl.....
+Parsing pddl..: [0.010s CPU, 0.002s wall-clock]
+Normalizing task.....
+Normalizing task..: [0.000s CPU, 0.000s wall-clock]
+Creating abstract structure graph.....
+Creating abstract structure graph..: [0.000s CPU, 0.000s wall-clock]
+Computing image from given graph...
+Using graph input file /tmp/tmpkhy20rgw/abstract-structure-graph.txt
+Using image output directory /tmp/tmpkhy20rgw
+Writing abstract structure graph grayscale 8bit image.....
+Grayscale color: 255
+Creating matrix for a graph with 60 nodes..
+Matrix size when created: 31752
+Matrix created, filling with values for edges..
+Performing bolding.
+Matrix size when 1s added: 31752
+Number of graph nodes: 63
+Shrink ratio: 3
+Shrinking matrix to size 21x21..
+Shrinked matrix size when created: 3528
+Writing grayscale image of size 128x128 ..
+Writing abstract structure graph grayscale 8bit image..: [0.190s CPU, 0.015s wall-clock]
+Done computing image! [0.200s CPU, 0.016s wall-clock]
+
+==== Computing an abstract structure graph from the lifted task description... ====
+
+
+==== Done computing an abstract structure graph. ====
+
+
+==== Selecting planner from learned model... ====
+
+Using json model file /workspace/delfi/dl_model/models/lifted/model.json
+Using h5 model file /workspace/delfi/dl_model/models/lifted/model.h5
+Loaded model from disk
+Chose 5652d59dafed-h2-simpless-oss-blind
+
+==== Done selecting planner from learned model. ====
+
+
+==== Running the selected planner... ====
+
+Running planner, call string: ['/usr/bin/python', '/workspace/delfi/fast-downward.py', '--transform-task', 'preprocess', '--build', 'release64', '--search-memory-limit', '7600M', '--plan-file', 'plan', 'domain', 'problem', '--symmetries', 'sym=structural_symmetries(search_symmetries=oss)', '--search', 'astar(blind,symmetries=sym,pruning=stubborn_sets_simple(minimum_pruning_ratio=0.01),num_por_probes=1000)']
+INFO     Running translator.
+INFO     translator input: ['domain', 'problem']
+INFO     translator arguments: []
+INFO     translator time limit: None
+INFO     translator memory limit: None
+INFO     callstring: /usr/bin/python /workspace/delfi/builds/release64/bin/translate/translate.py domain problem
+Parsing...
+Parsing: [0.000s CPU, 0.001s wall-clock]
+Normalizing task... [0.000s CPU, 0.000s wall-clock]
+Instantiating...
+Generating Datalog program... [0.000s CPU, 0.000s wall-clock]
+Normalizing Datalog program...
+Normalizing Datalog program: [0.000s CPU, 0.001s wall-clock]
+Preparing model... [0.000s CPU, 0.001s wall-clock]
+Generated 10 rules.
+Computing model... [0.000s CPU, 0.002s wall-clock]
+245 relevant atoms
+116 auxiliary atoms
+361 final queue length
+606 total queue pushes
+Completing instantiation... [0.010s CPU, 0.004s wall-clock]
+Instantiating: [0.010s CPU, 0.008s wall-clock]
+Computing fact groups...
+Finding invariants...
+5 initial candidates
+Finding invariants: [0.000s CPU, 0.001s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
+Instantiating groups... [0.000s CPU, 0.000s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+8 uncovered facts
+Choosing groups: [0.000s CPU, 0.000s wall-clock]
+Building translation key... [0.000s CPU, 0.000s wall-clock]
+Computing fact groups: [0.000s CPU, 0.002s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.000s wall-clock]
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.000s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Processing axioms: [0.000s CPU, 0.000s wall-clock]
+Translating task: [0.000s CPU, 0.005s wall-clock]
+110 effect conditions simplified
+0 implied preconditions added
+Detecting unreachable propositions...
+0 operators removed
+0 axioms removed
+7 propositions removed
+Detecting unreachable propositions: [0.000s CPU, 0.002s wall-clock]
+Reordering and filtering variables...
+12 of 12 variables necessary.
+7 of 12 mutex groups necessary.
+110 of 110 operators necessary.
+0 of 0 axiom rules necessary.
+Reordering and filtering variables: [0.010s CPU, 0.001s wall-clock]
+Translator variables: 12
+Translator derived variables: 0
+Translator facts: 39
+Translator goal facts: 5
+Translator mutex groups: 7
+Translator total mutex groups size: 32
+Translator operators: 110
+Translator axioms: 0
+Translator task size: 816
+Translator peak memory: 28076 KB
+Writing output... [0.000s CPU, 0.001s wall-clock]
+Done! [0.020s CPU, 0.020s wall-clock]
+INFO     Run task transformation (preprocess).
+INFO     Absolute path: /workspace/delfi/builds/release64/bin/preprocess
+INFO     callstring: /workspace/delfi/builds/release64/bin/preprocess < output.sas
+Building causal graph...
+The causal graph is not acyclic.
+12 variables of 12 necessary
+7 of 7 mutex groups necessary.
+110 of 110 operators necessary.
+0 of 0 axiom rules necessary.
+Initializing mutex computation...
+Mutex computation initialized with 39 fluents.
+iteration for mutex detection and operator pruning
+Initialize m_index fw
+Initialized mvalues forward: reached=144, notReached=1123, spurious=254
+Initialize m_ops fw
+Computing mutexes...
+Mutex computation finished with reached=1255, notReached=12, spurious=254
+0 operators are spurious because were not triggered
+H^2 mutexes added fw: 12, unreachable: 0
+0 of 110 operators detected as spurious
+iteration for mutex detection and operator pruning
+Initialize m_index bw
+Init values regression
+Initialized mvalues backward: reached=192, notReached=1063, spurious=266
+Initialize m_ops bw
+Computing mutexes...
+Mutex computation finished with reached=1255, notReached=0, spurious=266
+0 operators are spurious because were not triggered
+H^2 mutexes added bw: 0, unreachable: 0
+0 of 110 operators detected as spurious
+Total mutex and disambiguation time: 0.001043 iterations: 2
+13 of 13 mutex groups necessary.
+110 of 110 operators necessary.
+0 of 0 axiom rules necessary.
+Change id of operators: 110
+Change id of mutexes
+Change id of goals
+Change id of initial state
+Remove unreachable facts from variables: 12
+13 of 13 mutex groups necessary.
+110 of 110 operators necessary.
+0 of 0 axiom rules necessary.
+Updating causal graph and pruning unnecessary facts
+12 variables of 12 of 12 necessary
+The causal graph is not acyclic.
+12 variables of 12 necessary
+13 of 13 mutex groups necessary.
+110 of 110 operators necessary.
+0 of 0 axiom rules necessary.
+Building domain transition graphs...
+solveable in poly time 0
+Building successor generator...
+Preprocessor variables: 12
+Preprocessor facts: 39
+Preprocessor derived variables: 0
+Preprocessor operators: 110
+Preprocessor mutex groups: 13
+Preprocessor task size: 828
+Writing output...
+done
+INFO     Running search (release64).
+INFO     search input: output.sas
+INFO     search arguments: ['--symmetries', 'sym=structural_symmetries(search_symmetries=oss)', '--search', 'astar(blind,symmetries=sym,pruning=stubborn_sets_simple(minimum_pruning_ratio=0.01),num_por_probes=1000)']
+INFO     search time limit: None
+INFO     search memory limit: 7600 MB
+INFO     search executable: /workspace/delfi/builds/release64/bin/downward
+INFO     callstring: /workspace/delfi/builds/release64/bin/downward --symmetries 'sym=structural_symmetries(search_symmetries=oss)' --search 'astar(blind,symmetries=sym,pruning=stubborn_sets_simple(minimum_pruning_ratio=0.01),num_por_probes=1000)' --internal-plan-file plan < output.sas
+reading input... [t=4.5466e-05s]
+done reading input! [t=0.000360618s]
+packing state variables...done! [t=0.000374023s]
+Variables: 12
+FactPairs: 39
+Bytes per state: 4
+Building successor generator...done! [t=0.000464543s]
+peak memory difference for root successor generator creation: 0 KB
+time for root successor generation creation: 3.3653e-05s
+done initializing global data [t=0.000492065s]
+Initializing blind search heuristic...
+Initializing symmetries (eager search)
+Initializing symmetries
+Using Bliss to find group generators
+Done initializing symmetries: 0.000204602s
+Number of generators: 1
+Number of identity generators (on states, not on operators): 0
+Order of generators: [2]
+Conducting best first search with reopening closed nodes, (real) bound = 2147483647
+New best heuristic value for blind: 1
+[g=0, 1 evaluated, 0 expanded, t=0.000880928s, 5524 KB]
+f = 1 [1 evaluated, 0 expanded, t=0.000905925s, 5524 KB]
+Initial heuristic value for blind: 1
+pruning method: stubborn sets simple
+f = 2 [3 evaluated, 1 expanded, t=0.00129881s, 5524 KB]
+f = 3 [5 evaluated, 3 expanded, t=0.00134009s, 5524 KB]
+f = 4 [9 evaluated, 5 expanded, t=0.00137403s, 5524 KB]
+f = 5 [11 evaluated, 9 expanded, t=0.00141762s, 5524 KB]
+f = 6 [15 evaluated, 11 expanded, t=0.00144772s, 5524 KB]
+f = 7 [19 evaluated, 15 expanded, t=0.00149156s, 5524 KB]
+f = 8 [27 evaluated, 19 expanded, t=0.00153607s, 5524 KB]
+f = 9 [29 evaluated, 27 expanded, t=0.00161312s, 5524 KB]
+f = 10 [33 evaluated, 29 expanded, t=0.00165957s, 5524 KB]
+f = 11 [37 evaluated, 33 expanded, t=0.00170683s, 5524 KB]
+f = 12 [45 evaluated, 37 expanded, t=0.00175208s, 5524 KB]
+f = 13 [49 evaluated, 45 expanded, t=0.00181755s, 5524 KB]
+f = 14 [57 evaluated, 49 expanded, t=0.00186032s, 5524 KB]
+f = 15 [65 evaluated, 57 expanded, t=0.00195405s, 5524 KB]
+f = 16 [81 evaluated, 65 expanded, t=0.00204327s, 5524 KB]
+f = 17 [82 evaluated, 81 expanded, t=0.00217446s, 5524 KB]
+f = 18 [84 evaluated, 82 expanded, t=0.00220324s, 5524 KB]
+f = 19 [86 evaluated, 84 expanded, t=0.00223357s, 5524 KB]
+f = 20 [90 evaluated, 86 expanded, t=0.00226431s, 5524 KB]
+f = 21 [92 evaluated, 90 expanded, t=0.00230612s, 5524 KB]
+f = 22 [96 evaluated, 92 expanded, t=0.00233514s, 5524 KB]
+f = 23 [100 evaluated, 96 expanded, t=0.00237883s, 5524 KB]
+f = 24 [108 evaluated, 100 expanded, t=0.00242258s, 5524 KB]
+f = 25 [109 evaluated, 108 expanded, t=0.00251147s, 5524 KB]
+f = 26 [111 evaluated, 109 expanded, t=0.00254019s, 5524 KB]
+f = 27 [113 evaluated, 111 expanded, t=0.00257158s, 5524 KB]
+f = 28 [117 evaluated, 113 expanded, t=0.00260291s, 5524 KB]
+f = 29 [118 evaluated, 117 expanded, t=0.0026435s, 5524 KB]
+f = 30 [120 evaluated, 118 expanded, t=0.00266551s, 5524 KB]
+f = 31 [121 evaluated, 120 expanded, t=0.00269406s, 5524 KB]
+New best heuristic value for blind: 0
+[g=31, 122 evaluated, 121 expanded, t=0.00271642s, 5524 KB]
+Solution found!
+Actual search time: 0.0015369s [t=0.00282011s]
+move d1 d2 peg3 (1)
+move d2 d3 peg2 (1)
+move d1 peg3 d2 (1)
+move d3 d4 peg3 (1)
+move d1 d2 d4 (1)
+move d2 peg2 d3 (1)
+move d1 d4 d2 (1)
+move d4 d5 peg2 (1)
+move d1 d2 d4 (1)
+move d2 d3 d5 (1)
+move d1 d4 d2 (1)
+move d3 peg3 d4 (1)
+move d1 d2 peg3 (1)
+move d2 d5 d3 (1)
+move d1 peg3 d2 (1)
+move d5 peg1 peg3 (1)
+move d1 d2 peg1 (1)
+move d2 d3 d5 (1)
+move d1 peg1 d2 (1)
+move d3 d4 peg1 (1)
+move d1 d2 d4 (1)
+move d2 d5 d3 (1)
+move d1 d4 d2 (1)
+move d4 peg2 d5 (1)
+move d1 d2 d4 (1)
+move d2 d3 peg2 (1)
+move d1 d4 d2 (1)
+move d3 peg1 d4 (1)
+move d1 d2 peg1 (1)
+move d2 peg2 d3 (1)
+move d1 peg1 d2 (1)
+Plan length: 31 step(s).
+Plan cost: 31
+Expanded 122 state(s).
+Reopened 0 state(s).
+Evaluated 122 state(s).
+Evaluations: 122
+Generated 362 state(s).
+Dead ends: 0 state(s).
+Expanded until last jump: 120 state(s).
+Reopened until last jump: 0 state(s).
+Evaluated until last jump: 121 state(s).
+Generated until last jump: 359 state(s).
+Number of registered states: 157
+total successors before partial-order reduction: 362
+total successors after partial-order reduction: 362
+Search time: 0.00195768s
+Total time: 0.0028245s
+Solution found.
+Peak memory: 5524 KB
+Overall time: [0.110s CPU, 0.123s wall-clock]
+
+==== Done running the selected planner. ====
+
+
+Error: Using TensorFlow backend.
+
+
+Plan found:
+0.00000: (move d1 d2 peg3)
+0.00100: (move d2 d3 peg2)
+0.00200: (move d1 peg3 d2)
+0.00300: (move d3 d4 peg3)
+0.00400: (move d1 d2 d4)
+0.00500: (move d2 peg2 d3)
+0.00600: (move d1 d4 d2)
+0.00700: (move d4 d5 peg2)
+0.00800: (move d1 d2 d4)
+0.00900: (move d2 d3 d5)
+0.01000: (move d1 d4 d2)
+0.01100: (move d3 peg3 d4)
+0.01200: (move d1 d2 peg3)
+0.01300: (move d2 d5 d3)
+0.01400: (move d1 peg3 d2)
+0.01500: (move d5 peg1 peg3)
+0.01600: (move d1 d2 peg1)
+0.01700: (move d2 d3 d5)
+0.01800: (move d1 peg1 d2)
+0.01900: (move d3 d4 peg1)
+0.02000: (move d1 d2 d4)
+0.02100: (move d2 d5 d3)
+0.02200: (move d1 d4 d2)
+0.02300: (move d4 peg2 d5)
+0.02400: (move d1 d2 d4)
+0.02500: (move d2 d3 peg2)
+0.02600: (move d1 d4 d2)
+0.02700: (move d3 peg1 d4)
+0.02800: (move d1 d2 peg1)
+0.02900: (move d2 peg2 d3)
+0.03000: (move d1 peg1 d2)
+Metric: 0.03000000000000002
+Makespan: 0.03000000000000002
+States evaluated: undefined
+Planner found 1 plan(s) in 5.003secs.

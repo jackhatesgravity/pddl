@@ -1,0 +1,85 @@
+Planning service: https://solver.planning.domains:5001/package/dual-bfws-ffparser/solve
+Domain: hanoi, Problem: hanoi
+ --- OK.
+ Match tree built with 110 nodes.
+
+PDDL problem description loaded: 
+	Domain: HANOI
+	Problem: HANOI
+	#Actions: 110
+	#Fluents: 32
+Goals found: 5
+Goals_Edges found: 5
+Starting search with 1-BFWS...
+--[1 / 0]--
+--[1 / 2]--
+--[1 / 3]--
+--[1 / 4]--
+--[1 / 5]--
+--[1 / 6]--
+Total time: 0.000462
+Nodes generated during search: 156
+Nodes expanded during search: 84
+Plan found with cost: NOTFOUND
+Fast-BFS search completed in 0.000462 secs
+Starting search with BFWS(novel,land,h_(add)ff)...
+Landmarks found: 6
+Landmarks_Edges found: 7
+--[3 / 4294967295]--
+--[3 / 5]--
+--[3 / 4]--
+--[1 / 4]--
+--[1 / 3]--
+--[1 / 2]--
+--[1 / 1]--
+--[1 / 0]--
+--[0 / 0]--
+Total time: 0.003297
+Nodes generated during search: 423
+Nodes expanded during search: 141
+Plan found with cost: 37
+BFS search completed in 0.003297 secs
+
+
+Plan found:
+0.00000: (MOVE D1 D2 PEG3)
+0.00100: (MOVE D2 D3 PEG2)
+0.00200: (MOVE D1 PEG3 D2)
+0.00300: (MOVE D3 D4 PEG3)
+0.00400: (MOVE D1 D2 D3)
+0.00500: (MOVE D2 PEG2 D4)
+0.00600: (MOVE D1 D3 PEG2)
+0.00700: (MOVE D2 D4 D3)
+0.00800: (MOVE D1 PEG2 D2)
+0.00900: (MOVE D4 D5 PEG2)
+0.01000: (MOVE D1 D2 D4)
+0.01100: (MOVE D2 D3 D5)
+0.01200: (MOVE D1 D4 D2)
+0.01300: (MOVE D3 PEG3 D4)
+0.01400: (MOVE D1 D2 PEG3)
+0.01500: (MOVE D2 D5 D3)
+0.01600: (MOVE D1 PEG3 D2)
+0.01700: (MOVE D5 PEG1 PEG3)
+0.01800: (MOVE D1 D2 D5)
+0.01900: (MOVE D2 D3 PEG1)
+0.02000: (MOVE D1 D5 D2)
+0.02100: (MOVE D3 D4 D5)
+0.02200: (MOVE D1 D2 D3)
+0.02300: (MOVE D2 PEG1 D4)
+0.02400: (MOVE D1 D3 D2)
+0.02500: (MOVE D3 D5 PEG1)
+0.02600: (MOVE D1 D2 D5)
+0.02700: (MOVE D2 D4 D3)
+0.02800: (MOVE D1 D5 D2)
+0.02900: (MOVE D4 PEG2 D5)
+0.03000: (MOVE D1 D2 D4)
+0.03100: (MOVE D2 D3 PEG2)
+0.03200: (MOVE D1 D4 D2)
+0.03300: (MOVE D3 PEG1 D4)
+0.03400: (MOVE D1 D2 PEG1)
+0.03500: (MOVE D2 PEG2 D3)
+0.03600: (MOVE D1 PEG1 D2)
+Metric: 0.036000000000000025
+Makespan: 0.036000000000000025
+States evaluated: undefined
+Planner found 1 plan(s) in 2.831secs.
