@@ -57,11 +57,10 @@
     (adj sq-3-4 sq-4-4)
     (adj sq-4-4 sq-3-4)
 
-    ;; Declare the Gold and its position
-    (is-gold the-gold)
+    ;; Declare the position of the Gold
     (at the-gold sq-2-3)
 
-    ;; Declare the locations of the pits
+    ;; Declare the locations of the Pits
     (pit sq-3-1)
     (pit sq-3-3)
     (pit sq-4-4)

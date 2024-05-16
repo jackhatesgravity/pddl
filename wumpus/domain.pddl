@@ -8,7 +8,6 @@
    (have ?who ?what)
    (is-agent ?who)
    (is-wumpus ?who)
-   (is-gold ?what)
    (is-arrow ?what)
    (dead ?who))
 
